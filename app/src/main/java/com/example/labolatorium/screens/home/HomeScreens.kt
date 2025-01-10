@@ -1,9 +1,11 @@
 package com.example.labolatorium.screens.home
 
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.BottomAppBar
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
@@ -26,6 +28,14 @@ fun HomeScreen(navController: NavController) {
             ) {
                 Text(text = "Movies")
             }
+        },
+        bottomBar = {
+            BottomAppBar(
+                backgroundColor = Color.Blue,
+                elevation = 5.dp
+            ) {
+                Text(text = "Bottom Bar")
+            }
         }
     ) { it ->
         Column(modifier = Modifier.padding(it)) {
@@ -38,13 +48,14 @@ fun HomeScreen(navController: NavController) {
 fun MainContent(
     navController: NavController,
     moviesList: List<String> = listOf(
-        "Avatar",
-        "555",
-        "Harry Potter",
-        "Life",
-        "Lolek",
-        "Bolek",
-        "Krecik",
+        "Inception",
+        "The Matrix",
+        "Breaking Dawn",
+        "Winter Wonderland",
+        "14.02.2023",
+        "Lion",
+        "Parrot",
+        "Gourmet Feast"
     )
 ) {
     Column(modifier = Modifier.padding(12.dp)) {
